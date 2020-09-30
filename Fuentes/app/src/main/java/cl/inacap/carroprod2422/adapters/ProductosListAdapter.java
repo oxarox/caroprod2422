@@ -41,7 +41,7 @@ public class ProductosListAdapter extends ArrayAdapter<Producto> {
         nombreTv.setText(actual.getNombre());
         Picasso.get().load(actual.getFoto())
                 .resize(300,300)
-                .centerCrop()
+                .centerInside()
                 .into(imagenProducto);
         return fila;
     }
